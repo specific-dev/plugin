@@ -1,0 +1,26 @@
+---
+description: Guidelines for working with specific.local files which store local development secrets and configuration
+globs: "**/specific.local"
+---
+
+`specific.local` is a local-only HCL file for development secrets and configuration. It is used by `specific dev` in starting a local development environment. It must NEVER be committed to version control.
+
+## Format
+
+```hcl
+secrets {
+  secret_name = "value"
+}
+
+config {
+  config_name = "value"
+}
+```
+
+## Rules
+
+- Values in `specific.local` must correspond to `secret` and `config` declarations in `specific.hcl`
+- Secrets with `generated = true` in `specific.hcl` are auto-generated and don't need to be set here unless you want to override them
+- Config values with defaults in `specific.hcl` don't need to be set here unless you want to override them
+- NEVER suggest committing this file — it should always be in `.gitignore`
+- When a user needs to add a new secret or config, update BOTH `specific.hcl` (declaration) and `specific.local` (value)

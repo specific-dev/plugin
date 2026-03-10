@@ -1,0 +1,11 @@
+---
+description: Guidelines for writing and modifying specific.hcl configuration files
+globs: "**/specific.hcl"
+---
+
+When working with `specific.hcl` files:
+
+- ALWAYS run `specific docs` before writing or modifying configuration to get the latest syntax reference
+- ALWAYS run `specific check` after making changes to validate the configuration
+- The `specific.hcl` file should live at the root of the project
+- Use `specific docs [topic]` for detailed documentation on specific resource types (e.g. `specific docs postgres`, `specific docs service`)

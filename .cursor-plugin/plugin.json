@@ -1,0 +1,18 @@
+{
+  "name": "specific",
+  "version": "1.0.0",
+  "description": "Deploy and manage infrastructure with Specific. Automatically manage frontend, backend, databases, storage, secrets, all the way from local dev to production",
+  "author": {
+    "name": "Specific"
+  },
+  "keywords": [
+    "infrastructure",
+    "deployment",
+    "postgres",
+    "iac",
+    "specific"
+  ],
+  "logo": "assets/logo.svg",
+  "homepage": "https://specific.dev",
+  "repository": "https://github.com/specific-dev/cursor"
+}
